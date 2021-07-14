@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Campo Minato</title>
+</head>
+<body>
+    <!-- Sezione di selezione difficolta gioco -->
+    <label for="bombs_numer">Con quante bobe si vuole giocare?</label>
+    <input type="number" name="bombs_number" id="bombs_number" min="1" max="99" value="16">
+    <button id="start_playing">Iniziamo a giocare</button>
+
+    <!-- Sezione del titolo e di selezione numero da giocare -->
+    <h2 id="tytle" class="hidden">Scegli un numero:</h2>
+    <div id="number_selector" class="hidden">
+        <label for="insert_number">Inserisci il numero da giocare</label>
+        <input type="number" name="insert_number" id="insert_number" min="1" max="100" value="1">
+        <button id="submit_number">Scegli numero</button>
+        <span id="error_message" class="hidden">!Hai inserito un numero già inserito in precedenza!</span>
+    </div>
+
+    <!-- Sezione di stampa punteggio attuale e finale nel caso di sconfitta -->
+    <div id="points_display" class="my-10"></div>
+    <button id="reset" class="hidden">Gioca ancora</button>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
